@@ -25,6 +25,9 @@ main() {
 
   var effectiveDoer = new EffectiveDoer();
   effectiveDoer.doSomething();
+
+  print(greetBob(new Person('kathy')));
+  print(greetBob(new Imposter()));
 }
 
 class Rectangle {
@@ -51,3 +54,20 @@ class EffectiveDoer extends Doer {
     print('effective doer');
   }
 }
+
+// 接口
+class Person {
+  final _name;
+
+  Person(this._name);
+
+  String greet(who) => 'Hello, $who. I am $_name.';
+}
+
+class Imposter implements Person {
+  final _name = '';
+
+  String greet(who) => 'Hi $who. Do you know who i am?';
+}
+
+greetBob(Person person) => person.greet('bob');
