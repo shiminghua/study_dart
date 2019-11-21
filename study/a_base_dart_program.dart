@@ -9,4 +9,7 @@ main() {
   var number = 86;
   // 调用一个方法
   printNumber(number);
+
+  int lineCount;
+  assert(lineCount == 1);
 }
