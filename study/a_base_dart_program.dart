@@ -12,4 +12,18 @@ main() {
 
   int lineCount;
   assert(lineCount == 1);
+
+  var s = r'aaaaaaaa \n aaaaa';
+  var s2 = 'aaaaaaaa \n aaaaa';
+  print(s);
+  print(s2);
+
+  var clapping = '\u{1f44f}';
+  print(clapping);
+  print(clapping.codeUnits);
+  print(clapping.runes.toList());
+
+  Runes input = new Runes(
+      '\u2665  \u{1f605}  \u{1f60e}  \u{1f47b}  \u{1f596}  \u{1f44d}');
+  print(new String.fromCharCodes(input));
 }
